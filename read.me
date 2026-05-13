@@ -1,0 +1,32 @@
+cat << 'EOF' > README.md
+# Monitored Web Stack (DevOps Portfolio Project)
+
+This project simulates a production-ready DevOps environment. It automates the packaging and deployment of a multi-container system featuring a Python web server and a Grafana monitoring dashboard.
+
+## Architecture
+- **Application Layer:** Python 3.9-slim container running an isolated HTTP server.
+- **Visualization Layer:** Grafana Enterprise container for infrastructure metric visualization.
+- **Orchestration:** Docker Compose automating networking, port exposure, and self-healing policies (`restart: always`).
+
+## Prerequisites
+- [Docker Desktop](https://docker.com) installed and running.
+
+## Getting Started
+To boot the entire infrastructure with a single command, navigate to the project root and execute:
+
+```bash
+docker compose up -d
+```
+
+### Verifying the Services
+Once running, you can access the infrastructure via your browser:
+- **Web Application:** [http://localhost:5000](http://localhost:5000)
+- **Grafana Dashboard:** [http://localhost:3000](http://localhost:3000) (Default Credentials: `admin` / `admin`)
+
+## Teardown
+To safely stop and remove the isolated containers and networks, run:
+```bash
+docker compose down
+```
+EOF
+
