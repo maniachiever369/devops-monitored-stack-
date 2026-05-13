@@ -1,3 +1,4 @@
+
 cat << 'EOF' > .github/workflows/ci-pipeline.yml
 name: DevOps CI Pipeline
 
@@ -20,7 +21,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-python-version: '3.9'
+        python-version:'3.10'
 
     # 3. Perform a syntax check (Linting) to ensure developers didn't make a typo
     - name: Check Python Syntax
