@@ -1,5 +1,3 @@
-
-cat << 'EOF' > docker-compose.yml
 version: '3.8'
 
 services:
@@ -16,5 +14,3 @@ services:
     ports:
       - "3000:3000"
     restart: unless-stopped
-EOF
-
